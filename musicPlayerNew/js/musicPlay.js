@@ -1,4 +1,4 @@
-
+﻿
 
 const Music = {
 
@@ -27,7 +27,7 @@ const Music = {
 
     //  歌词字符串转时间
     strToTime (str) {
-        var timeArr = str.split(":");
+        let timeArr = str.split(":");
         return parseFloat(timeArr[0]) * 60 + parseFloat(timeArr[1]);
     },
 
@@ -38,8 +38,8 @@ const Music = {
 
     //  监听歌曲进度
     musicRate () {
-        var _self = this;
-        var start = 0;
+        let _self = this;
+        let start = 0;
         $('audio').on("timeupdate",function(){
             var scale=this.currentTime;
             
