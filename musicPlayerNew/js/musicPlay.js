@@ -41,9 +41,9 @@ const Music = {
         let _self = this;
         let start = 0;
         $('audio').on("timeupdate",function(){
-            var scale=this.currentTime;
+            let scale=this.currentTime;
             
-            for(var i = start; i < _self.lyric.length; i ++) {
+            for(let i = start; i < _self.lyric.length; i ++) {
                 if(scale >= _self.lyric[i][0]) {
                     _self.lyricStyleChange(i);
                     start ++;
