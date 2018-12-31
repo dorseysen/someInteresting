@@ -1,0 +1,51 @@
+body{
+    overflow:scroll;
+    background:url("../assets/bg.jpg") fixed no-repeat;
+    background-size:cover;
+}
+
+.music{
+    width:400px;
+    margin:0 auto;
+}
+.music audio{
+    width:100%;
+    background-color: transparent;
+}
+.lyric-container{
+    position: relative;
+    width:400px;
+    height:500px;
+    margin:0 auto;
+    overflow-y:auto;
+    overflow-x:hidden;
+    font:18px "microsoft Yahei";
+    color: rgba(255,255,255,.6);
+    text-align: center;
+    box-shadow:0 0 10px #fff;
+    cursor: pointer;
+}
+.lyric{
+    top:0;
+    left:0;
+    width: 100%;
+    transition: 0.3s;
+    position: absolute;
+}
+.hide-scroll{
+    -ms-overflow-style:none;
+    overflow:-moz-scrollbars-none;
+}
+.hide-scroll::-webkit-scrollbar{
+    display:none;
+}
+.lyric p{
+    background-color: transparent;
+    
+    transition: 0.3s;
+}
+.active{
+    
+    color: #fff;
+    transform: scale(1.5);
+}
