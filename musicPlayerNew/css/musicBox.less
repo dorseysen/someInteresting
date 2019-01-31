@@ -1,0 +1,66 @@
+
+@import "./common.less";
+.fa:hover{
+    transition: 0.5s;
+    transform: rotateZ(360deg) scale(1.4);
+}
+.music-box {
+	
+	.music-list{
+		height:80%;
+		.music-unit{
+			padding: 10px;
+			cursor: pointer;
+		}
+		.music-unit:hover{
+			background-color: rgba(255,255,255,.3);
+		}
+	}
+
+}
+.progress-bar {
+
+	width: 90%;
+	height: 30%;
+	margin: 1% 5% 5%;
+	transition: all .2s;
+	position: relative;
+	box-sizing: border-box;
+
+	.time {
+		width: 100%;
+		font: 12px "Times New Roman";
+		margin-bottom: 2px;
+	}
+	.time:after {
+		content: "";
+		display: block;
+		clear: both
+	}
+	.bar-bg,.bar-fg{
+		.abs;
+		.border-radius;
+	}
+	.bar-bg {
+		width: 100%;
+		height: 3px;
+		background: #ccc;
+	}
+
+	.bar-fg {
+		width: 100px;
+		height: 3px;
+		background: linear-gradient(to left,#438aff,#cdfff7);
+	}
+
+	.bar-slide {
+		width: 10px;
+		height: 10px;
+		left: 90px;
+		top: -3.5px;
+		background: linear-gradient(to right,#438aff,#fff,#438aff);
+		.abs;
+		.border-radius(5px 5px 5px 5px);
+		cursor: pointer
+	}
+}

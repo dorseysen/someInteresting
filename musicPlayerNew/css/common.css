@@ -1,0 +1,51 @@
+body,
+dd,
+div,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+li,
+ol,
+p,
+span,
+table,
+ul {
+  margin: 0;
+  padding: 0;
+}
+li,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.tc {
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+.active {
+  color: #fff;
+  transform: scale(1.5);
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.abs {
+  position: absolute;
+}

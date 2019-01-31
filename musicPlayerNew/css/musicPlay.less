@@ -1,0 +1,84 @@
+@import "./font-awesome.min.css";
+@import "./common.less";
+@import "./musicBox.less";
+@import "./lyric.less";
+
+body{
+    overflow:hidden;
+    background:url("../assets/bg.jpg") fixed no-repeat;
+    background-size:cover;
+    color: #fff;
+}
+
+.music{
+    width:400px;
+    margin:0 auto;
+}
+.music audio{
+    width:100%;
+    background-color: transparent;
+}
+.music-player{
+    width: 98%;
+    max-width: 400px;
+    margin: 1% auto;
+    box-sizing: border-box;
+    .box-shadow(0 0 10px #fff inset);
+    header{
+        width: 100%;
+        height: 10%;
+        padding: 10px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+        .player-title{
+            padding-left: 10px;
+        }
+    }
+    section{
+        height: 70%;
+    }
+    footer{
+        width: 100%;
+        height: 20%;
+        .box-shadow(0 0 10px #fff inset);
+    }
+    .active-list{
+        background-color: rgba(255,255,255,.3);
+    }
+}
+.player-nav{
+    height: 8%;
+    li{
+        width: 50%;
+        padding: 10px;
+        box-sizing: border-box;
+        height: 100%;
+        line-height: 100%;
+        .fl;
+        .tc;
+        cursor:pointer;
+    }
+    li:hover{
+        background-color: rgba(255,255,255,.3);
+    }
+}
+.player-detail{
+    width: 100%;
+    height: 92%;
+    border: 1px solid rgba(255,255,255,.3);
+    box-sizing: border-box;
+}
+
+.base-btn{
+    height: 50%;
+    font-size: 20px;
+    padding-top: 15px;
+    span{
+        .tc;
+        width: 30%;
+        cursor: pointer;
+    }
+    .fa-play-circle,.fa-pause-circle{
+        font-size: 35px;
+    }
+}

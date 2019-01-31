@@ -1,0 +1,32 @@
+.lyric-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font: 18px "microsoft Yahei";
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  box-shadow: 0 0 10px #fff;
+  cursor: pointer;
+}
+.lyric {
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  position: absolute;
+}
+.lyric p {
+  background-color: transparent;
+  padding: 10px;
+  transition: 0.3s;
+}
+.hide-scroll {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}

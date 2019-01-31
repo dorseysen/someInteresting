@@ -1,51 +1,229 @@
-body{
-    overflow:scroll;
-    background:url("../assets/bg.jpg") fixed no-repeat;
-    background-size:cover;
+@import "font-awesome.min.css";
+body,
+dd,
+div,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+li,
+ol,
+p,
+span,
+table,
+ul {
+  margin: 0;
+  padding: 0;
 }
-
-.music{
-    width:400px;
-    margin:0 auto;
+li,
+ul {
+  list-style: none;
 }
-.music audio{
-    width:100%;
-    background-color: transparent;
+a {
+  text-decoration: none;
 }
-.lyric-container{
-    position: relative;
-    width:400px;
-    height:500px;
-    margin:0 auto;
-    overflow-y:auto;
-    overflow-x:hidden;
-    font:18px "microsoft Yahei";
-    color: rgba(255,255,255,.6);
-    text-align: center;
-    box-shadow:0 0 10px #fff;
-    cursor: pointer;
+.fl {
+  float: left;
 }
-.lyric{
-    top:0;
-    left:0;
-    width: 100%;
-    transition: 0.3s;
-    position: absolute;
+.fr {
+  float: right;
 }
-.hide-scroll{
-    -ms-overflow-style:none;
-    overflow:-moz-scrollbars-none;
+.tc {
+  text-align: center;
 }
-.hide-scroll::-webkit-scrollbar{
-    display:none;
+.hide {
+  display: none;
 }
-.lyric p{
-    background-color: transparent;
-    
-    transition: 0.3s;
+.active {
+  color: #fff;
+  transform: scale(1.5);
 }
-.active{
-    
-    color: #fff;
-    transform: scale(1.5);
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.abs {
+  position: absolute;
+}
+.fa:hover {
+  transition: 0.5s;
+  transform: rotateZ(360deg) scale(1.4);
+}
+.music-box .music-list {
+  height: 80%;
+}
+.music-box .music-list .music-unit {
+  padding: 10px;
+  cursor: pointer;
+}
+.music-box .music-list .music-unit:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.progress-bar {
+  width: 90%;
+  height: 30%;
+  margin: 1% 5% 5%;
+  transition: all .2s;
+  position: relative;
+  box-sizing: border-box;
+}
+.progress-bar .time {
+  width: 100%;
+  font: 12px "Times New Roman";
+  margin-bottom: 2px;
+}
+.progress-bar .time:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.progress-bar .bar-bg,
+.progress-bar .bar-fg {
+  position: absolute;
+  border-radius: 1.5px 1.5px 1.5px 1.5px;
+  -webkit-border-radius: 1.5px 1.5px 1.5px 1.5px;
+  -moz-border-radius: 1.5px 1.5px 1.5px 1.5px;
+}
+.progress-bar .bar-bg {
+  width: 100%;
+  height: 3px;
+  background: #ccc;
+}
+.progress-bar .bar-fg {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to left, #438aff, #cdfff7);
+}
+.progress-bar .bar-slide {
+  width: 10px;
+  height: 10px;
+  left: 90px;
+  top: -3.5px;
+  background: linear-gradient(to right, #438aff, #ffffff, #438aff);
+  position: absolute;
+  border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+.lyric-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font: 18px "microsoft Yahei";
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  box-shadow: 0 0 10px #fff;
+  cursor: pointer;
+}
+.lyric {
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  position: absolute;
+}
+.lyric p {
+  background-color: transparent;
+  padding: 10px;
+  transition: 0.3s;
+}
+.hide-scroll {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+body {
+  overflow: hidden;
+  background: url("../assets/bg.jpg") fixed no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.music {
+  width: 400px;
+  margin: 0 auto;
+}
+.music audio {
+  width: 100%;
+  background-color: transparent;
+}
+.music-player {
+  width: 98%;
+  max-width: 400px;
+  margin: 1% auto;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #ffffff inset;
+  -webkit-box-shadow: 0 0 10px #ffffff inset;
+  -moz-box-shadow: 0 0 10px #ffffff inset;
+  -o-box-shadow: 0 0 10px #ffffff inset;
+}
+.music-player header {
+  width: 100%;
+  height: 10%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.music-player header .player-title {
+  padding-left: 10px;
+}
+.music-player section {
+  height: 70%;
+}
+.music-player footer {
+  width: 100%;
+  height: 20%;
+  box-shadow: 0 0 10px #ffffff inset;
+  -webkit-box-shadow: 0 0 10px #ffffff inset;
+  -moz-box-shadow: 0 0 10px #ffffff inset;
+  -o-box-shadow: 0 0 10px #ffffff inset;
+}
+.music-player .active-list {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.player-nav {
+  height: 8%;
+}
+.player-nav li {
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 100%;
+  line-height: 100%;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+}
+.player-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.player-detail {
+  width: 100%;
+  height: 92%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+}
+.base-btn {
+  height: 50%;
+  font-size: 20px;
+  padding-top: 15px;
+}
+.base-btn span {
+  text-align: center;
+  width: 30%;
+  cursor: pointer;
+}
+.base-btn .fa-play-circle,
+.base-btn .fa-pause-circle {
+  font-size: 35px;
 }

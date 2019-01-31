@@ -1,0 +1,51 @@
+body,dd,div,dt,h1,h2,h3,h4,h5,h6,html,li,ol,p,span,table,ul {
+	margin: 0;
+	padding: 0
+}
+li,ul {
+	list-style: none
+}
+a {
+	text-decoration: none
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.tc{
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+.active{
+    color: #fff;
+    transform: scale(1.5);
+}
+
+.clearfix:after{
+    content:'';
+    display: table;
+    clear:both;
+}
+.box-shadow(@params: -1px 1px 10px #fff){
+    box-shadow: @params;
+	-webkit-box-shadow: @params;
+	-moz-box-shadow: @params;
+	-o-box-shadow: @params;
+}
+// .border-radius(@top:1.5px,@right:1.5px,@bottom:1.5px,@left:1.5px) {
+//     border-radius: @top @right @bottom @left;
+//     -webkit-border-radius: @top @right @bottom @left;
+//     -moz-border-radius: @top @right @bottom @left;
+// }
+.border-radius(@params:1.5px 1.5px 1.5px 1.5px) {
+    border-radius: @params;
+    -webkit-border-radius: @params;
+    -moz-border-radius: @params;
+}
+.abs{
+    position: absolute;
+}

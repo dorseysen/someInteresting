@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,86 @@
     <title>音乐播放器</title>
     <link rel="stylesheet" href="css/musicPlay.css">
 </head>
+
 <body>
-    <div class="music">
-        <audio src="assets/宁采臣 - 逍遥叹.mp3" controls="controls"></audio>
+    <div class="music-player musicPlayer">
+
+        <header>
+            <span class="fa fa-music"></span>
+            <span class="player-title">dorsey music</span>
+        </header>
+
+        <section>
+            <ul class="player-nav clearfix playerNav">
+                <li class="active-list"><span class="fa fa-list" title="音乐列表"></span></li>
+                <li><span class="fa fa-music" title="歌词"></span></li>
+            </ul>
+            <div class="player-detail playerDetail">
+                <!-- 音乐盒 -->
+                <div class="music-box">
+                    <!-- 音乐列表 -->
+                    <div class="music-list musicList">
+                        <p class="music-unit" musicIndex="0">刘至佳 - 生僻字</p>
+                        <p class="music-unit" musicIndex="1">宁采臣 - 逍遥叹</p>
+                        <p class="music-unit" musicIndex="2">易欣 - 断点</p>
+                        <script type="x-tmpl" id="musicListTmpl">
+                            {% for(var i in o) { %}
+                                <p>{%= o[i][1] %}</p>
+                            {% } %}
+                        </script>
+                    </div>
+                </div>
+                <!-- 歌词 -->
+                <div class="lyric-container hide-scroll hide">
+                    <div class="lyric hide-scroll">
+                        <script type="x-tmpl" id="lyricTmpl">
+                            {% for(var i in o) { %}
+                                <p>{%= o[i][1] %}</p>
+                            {% } %}
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- 功能按钮组 -->
+        <footer class="music-btn-group">
+
+            <div class="base-btn btnGroup">
+                <span class="fa fa-step-backward preBtn"></span>
+                <span class="fa fa-play-circle playBtn"></span>
+                <span class="fa fa-pause-circle pauseBtn hide"></span>
+
+                <span class="fa fa-step-forward nextBtn"></span>
+            </div>
+
+            <div class="progressBar progress-bar">
+                <div class="time">
+                    <span class="dc_left">刘至佳 - 生僻字</span>
+                    <span class="dc_right">01:16 / 03:22</span>
+                </div>
+                <span class="barBg bar-bg">
+                    <span class="barFg bar-fg"></span>
+                    <span class="barSlide bar-slide"></span>
+                </span>
+            </div>
+
+        </footer>
     </div>
-    <div class="lyric-container hide-scroll">
-        <div class="lyric hide-scroll"></div>
+
+    <!-- 歌 -->
+    <div class="music" id="music">
+        <audio src="assets/宁采臣 - 逍遥叹.mp3"></audio>
     </div>
-    
-    <script type = "x-tmpl" id = "lyricTmpl">
-        {% for(var i in o) { %}
-            <p>{%= o[i][1] %}</p>
-        {% } %}
-    </script>
+
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/tmpl.js" type="text/javascript"></script>
-    <script src="js/musicPlay.js" type="text/javascript"></script>
+    <script type="module">
+
+        import Music from "./js/musicPlay.js";
+        Music.init();
+
+    </script>
 </body>
+
 </html>
