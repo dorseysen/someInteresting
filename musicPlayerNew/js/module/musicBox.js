@@ -59,9 +59,8 @@ const MusicBox = {
             e=e||window.event;
             _self.slideAble=true;
             var ex=e.pageX-$(".barSlide").get(0).offsetLeft;
-            //每一次点击都存储一个滑块x初值，由于这里滑块得保持水平，所以不加一个Y，
-            // 这里各位可以延伸写一个拖拽组件出来
-            $(document).on({
+            
+            $("body").on({
                 mousemove:function(e){
                     e=e||window.event;
                     if(_self.slideAble){
