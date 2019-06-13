@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>爬虫测试</title>
+</head>
+<body>
+    你好啊，my name is dorsey
+    <script type="module">
+        
+        fetch('./cache/jobs.txt')
+        .then(res => res.json())
+        .then(data => {
+            
+            console.log(data);
+            
+        });
+
+        import { DataAnalysis } from './dataAnalysis/dataAnalysis.js';
+
+        console.log(new DataAnalysis());
+
+    </script>
+</body>
+</html>
