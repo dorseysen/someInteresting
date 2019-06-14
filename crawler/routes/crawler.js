@@ -32,7 +32,8 @@ class crawlData {
     }
     getDataPackage (url, curPage) {
         console.log(url);
-        https.get(url,function(response){
+        let _self = this;
+        https.get(url, function(response){
             var chunks = [];
             var size = 0;
             response.on('data',function(chunk){
@@ -74,8 +75,7 @@ class crawlData {
                     result.push(map);
                     map = {};
                 });
-                console.log(result);
-                let dataStr = JSON.stringify(result).trim().replace(/^\[/, curPage == 1 ? '[' : '').replace(/\]$/, curPage == 10 ? ']' : ',');
+                let dataStr = JSON.stringify(result).trim().replace(/^\[/, curPage == 1 ? '[' : '').replace(/\]$/, curPage == _self.page ? ']' : ',');
                 fs.writeFile('./cache/jobs.txt', dataStr, { 'flag': 'a' }, function(err) {
                     if(err) throw err;
                     console.log('写入成功');
@@ -84,5 +84,5 @@ class crawlData {
         });
     }
 }
-//  一个数据包40条，这里是10 * 40 = 400条
-new crawlData(10);
+//  一个数据包40条，这里是99 * 40 = 3960条
+new crawlData(99);
