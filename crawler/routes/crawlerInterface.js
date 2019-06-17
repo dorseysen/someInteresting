@@ -10,7 +10,6 @@ router.get('/', function (req, res) {
     res.send('爬虫测试');
 });
 
-
 router.get('/getJobs', function (req, res) {
 
     let url = 'https://www.liepin.com/zhaopin/?isAnalysis=&dqs=&pubTime=&salary=&subIndustry=&industryType=&compscale=&key=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91&init=-1&searchType=1&headckid=b41b3a1f788e456c&flushckid=1&compkind=&fromSearchBtn=2&sortFlag=15&ckid=b41b3a1f788e456c&degradeFlag=0&curPage=1&jobKind=&industries=&clean_condition=&siTag=D_7XS8J-xxxQY6y2bMqEWQ%7Eha394EQxjcUgWMmp6o3mbw&d_sfrom=search_prime&d_pageSize=40&d_headId=ad878683a46e56bca93e6f921e59a95&d_ckId=ad878683a46e56bca93e6f921e59a95c&d_curPage=1';

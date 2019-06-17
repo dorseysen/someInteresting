@@ -86,3 +86,4 @@ class crawlData {
 }
 //  一个数据包40条，这里是99 * 40 = 3960条
 new crawlData(99);
+// module.exports = crawlData;

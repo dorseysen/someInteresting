@@ -12,7 +12,7 @@ app.use('/index.html', function (req, res) {
         else{
             res.write(data);
         }
-    })
+    });
 });
 //添加爬虫路由
 app.use('/crawler', require('./routes/crawler'));

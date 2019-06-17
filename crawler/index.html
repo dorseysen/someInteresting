@@ -5,22 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>爬虫测试</title>
+    <style>
+        html, body, div, p, h1, h2, h3{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(235, 240, 247);
+        }
+        .pie{
+            margin: 0 auto;
+            width: 720px;
+            height: 600px;
+        }
+        .tag{
+            width: 1200px;
+            height: 800px;
+        }
+    </style>
 </head>
 <body>
-    你好啊，my name is dorsey
+    <div class='pie area'></div>
+    <div class='pie edu'></div>
+    <div class='tag reward'></div>
+    <div class='pie rank'></div>
+    <div class='tag companyTag'></div>
+    
+    <script src='./dataAnalysis/echarts.min.js'></script>
     <script type="module">
-        
-        fetch('./cache/jobs.txt')
-        .then(res => res.json())
-        .then(data => {
-            
-            console.log(data);
-            
-        });
 
         import { DataAnalysis } from './dataAnalysis/dataAnalysis.js';
+        import { PicChart } from './dataAnalysis/picChart.js';
 
-        console.log(new DataAnalysis());
+        let data = new DataAnalysis();
+        console.log(data);
+        
+        setTimeout(function () {
+            
+            new PicChart(JSON.parse(JSON.stringify(data.areaMap)), '.area', 'areaMap');
+            new PicChart(JSON.parse(JSON.stringify(data.eduMap)), '.edu', 'eduMap');
+            new PicChart(JSON.parse(JSON.stringify(data.rewardMap)), '.reward', 'rewardMap');
+            new PicChart(JSON.parse(JSON.stringify(data.rank)), '.rank', 'rank');
+            new PicChart(JSON.parse(JSON.stringify(data.companyTag)), '.companyTag', 'companyTag');
+            
+        }, 1000);
 
     </script>
 </body>

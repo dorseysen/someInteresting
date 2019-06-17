@@ -10,7 +10,7 @@ export const dataDictionary = {
         '其他': 0
     },
     //  最低学历要求
-    education: {
+    eduMap: {
         '博士': 0,
         '硕士': 0,
         '本科': 0,
@@ -28,7 +28,7 @@ export const dataDictionary = {
         '60-69万': 0,
         '70-79万': 0,
         '80-99万': 0,
-        '100万以上': 0,
+        '100万及以上': 0,
         '面议': 0
     },
     //  公司标签 - 只按照标签计算，会超过总工作数，初步预估总标签数是总工作数的几倍
@@ -67,6 +67,15 @@ export const dataDictionary = {
         '初中级': 0,
         '高级': 0,
         '资深': 0,
-        '前端专家': 0
+        '专家': 0,
+        '主管': 0
     }
+}
+export const Relation = {
+
+    areaMap: '岗位工作地点',
+    eduMap: '最低学历要求',
+    rewardMap: '薪酬水平分布',
+    rank: '前端级别要求',
+    companyTag: '公司标签'
 }
