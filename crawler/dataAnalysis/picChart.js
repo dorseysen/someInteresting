@@ -31,8 +31,6 @@ export class PicChart {
     }
     createOption () {
 
-        let _left = this;
-
         this.option = {
             title:{
                 text: Relation[this.keyWord],
@@ -48,7 +46,7 @@ export class PicChart {
                 orient: 'vertical',
                 x: 'right',
                 y: 'center',
-                data: _left.value.map(item => item.name)
+                data: this.value.map(item => item.name)
             },
             color: ['#1790cf','#1bb2d8','#99d2dd','#88b0bb','#1c7099','#038cc4','#75abd0','#afd6dd'],
             series: [
@@ -89,7 +87,7 @@ export class PicChart {
                             }
                         }
                     },
-                    data: _left.value
+                    data: this.value
                 }
             ]
         }
