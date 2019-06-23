@@ -2,12 +2,21 @@
 about some interesting mini program that I writed
 
 ### about crawler
-第一步  
-安装node爬虫所需依赖，主要有：cheerio，express
 
-第二步  
-直接在终端terminal运行：node ./routes/crawler.js
+#### 分三步
 
-第三步  
-将index.html在服务器上运行（vscode和webStorm都有相应的快捷键或右键菜单）
+> npm/cnpm i   
+
+由于cheerio等后台模块不会记录在package.json里，故而需要自己安装cheerio。  
+
+> npm run server 服务端运行，访问：http://127.0.0.1:8088/index.html  
+
+> npm run build 打包。  
+
+直接在终端terminal运行：  
+
+> node ./src/routes/crawler.js  
+
+可自行修改资源URL与页数
+
 
