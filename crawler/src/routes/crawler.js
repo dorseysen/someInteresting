@@ -76,7 +76,7 @@ class crawlData {
                     map = {};
                 });
                 let dataStr = JSON.stringify(result).trim().replace(/^\[/, curPage == 1 ? '[' : '').replace(/\]$/, curPage == _self.page ? ']' : ',');
-                fs.writeFile('./cache/jobs.txt', dataStr, { 'flag': 'a' }, function(err) {
+                fs.writeFile('./src/cache/jobs.txt', dataStr, { 'flag': 'a' }, function(err) {
                     if(err) throw err;
                     console.log('写入成功');
                 });
@@ -85,5 +85,5 @@ class crawlData {
     }
 }
 //  一个数据包40条，这里是99 * 40 = 3960条
-new crawlData(99);
+new crawlData(1);
 // module.exports = crawlData;

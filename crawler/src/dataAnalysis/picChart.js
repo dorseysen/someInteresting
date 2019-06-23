@@ -32,6 +32,7 @@ export class PicChart {
     createOption () {
 
         this.option = {
+
             title:{
                 text: Relation[this.keyWord],
                 subtext: '数据样本: ' + this.sum,
